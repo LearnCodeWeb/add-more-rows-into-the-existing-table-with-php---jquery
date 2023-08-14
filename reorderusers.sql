@@ -1,26 +1,13 @@
 CREATE TABLE
     `reorderusers` (
-        `id` int(11) NOT NULL,
+        `id` int(11) NOT NULL AUTO_INCREMENT,
         `username` varchar(64) NOT NULL,
         `useremail` varchar(128) NOT NULL,
         `userphone` varchar(24) NOT NULL,
         `usercountry` int(11) NOT NULL,
-        `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-    ) ENGINE = MyISAM DEFAULT CHARSET = latin1;
-
---
-
--- Dumping data for table `reorderusers`
-
---
-
-ALTER TABLE `reorderusers` ADD PRIMARY KEY (`id`);
-
-ALTER TABLE
-    `reorderusers` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 9;
-
-COMMIT;
+        `dt` timestamp NOT NULL DEFAULT current_timestamp(),
+        PRIMARY KEY (`id`)
+    ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = latin1;
 
 INSERT INTO
     `reorderusers` (
